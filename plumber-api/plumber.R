@@ -2,8 +2,9 @@ library(plumber)
 
 #* @apiTitle Plumber Load Test API
 
-#* Wait 0.2 seconds and then echo back the input
-#* @param msg The message to echo
+#* Wait a configurable number of seconds and then echo back the input,
+#* copied a configurable number of times
+#*
 #* @param sleep:numeric The length of time to sleep (in seconds) (default 0.2)
 #* @param copies:numeric The number of times to copy the message (default 1)
 #* @get /echo
