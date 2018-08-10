@@ -5,6 +5,7 @@ library(plumber)
 #* Wait a configurable number of seconds and then echo back the input,
 #* copied a configurable number of times
 #*
+#* @param msg:character The message to echo
 #* @param sleep:numeric The length of time to sleep (in seconds) (default 0.2)
 #* @param copies:numeric The number of times to copy the message (default 1)
 #* @response 500 Bad Inputs
