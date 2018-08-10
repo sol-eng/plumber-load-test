@@ -7,6 +7,8 @@ library(plumber)
 #*
 #* @param sleep:numeric The length of time to sleep (in seconds) (default 0.2)
 #* @param copies:numeric The number of times to copy the message (default 1)
+#* @response 500 Bad Inputs
+#* @response 200 Echoed text with configurable wait and copies
 #* @get /echo
 load_func <- function(msg = "", sleep = 0.2, copies = 1) {
    
