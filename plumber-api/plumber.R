@@ -12,13 +12,17 @@ library(plumber)
 #* @response 200 Echoed text with configurable wait and copies
 #* @get /echo
 load_func <- function(msg = "", sleep = 0.2, copies = 1) {
+  
+  sleep <- as.double(sleep)
    
   start <- Sys.time()
   counter <- 0
   message("starting counting")
+  message(paste0("Planning to count for (seconds): ", sleep))
   while (as.double(Sys.time() - start) < sleep) {
     counter <- counter + 1
   }
+  message(paste0("Time elapsed: ", as.double(Sys.time() - start)))
   message("done counting")
   list(msg = paste0("The message is: '", 
                     paste(rep(msg, as.integer(copies)), collapse = " ")
